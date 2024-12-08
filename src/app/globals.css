@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'Helvetica';
+  src: url('/fonts/Helvetica.woff2') format('woff2');
+}
+
+.helvetica-text {
+  font-family: var(--font-helvetica), Helvetica, Arial, sans-serif;
+}
+
+.social-icon {
+  @apply text-white text-xl transition-transform duration-300;
+}
+
+.social-icon:hover {
+  @apply scale-110 text-orange-500;
+}

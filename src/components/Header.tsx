@@ -2,22 +2,30 @@ import React from "react";
 import Link from "next/link";
 import { FaAngleDown } from "react-icons/fa";
 import { IoSearch } from "react-icons/io5";
-import { Button } from "@/components/ui/button";
 import { PiHandbag } from "react-icons/pi";
+import { FaFacebookF, FaPinterestP } from "react-icons/fa";
+import { TiSocialTwitter } from "react-icons/ti";
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+
+
 
 export default function Header() {
   return (
-    <div className="w-full h-[87px] mt-[45px] md:px-[50px] lg:px-[100pxpx]  xl:px-[200px] 2xl:px-[300px] justify-center items-center">
-      <div className="flex justify-center items-center text-2xl font-bold">
+    <div className='h-[1080px] lg:h-[950px] relative bg-[url("/images/restaurant/Hero/unsplash_qom5MPOER-I.svg")] bg-cover bg-center'>
+      <div className="absolute inset-0 bg-[rgba(13,13,13,0.95)]"></div>
+    <div className="relative z-10 w-full h-[87px] pt-[45px] md:px-[50px] lg:px-[100px]  xl:px-[200px] 2xl:px-[300px] justify-center items-center">
+      <div className="flex justify-center items-center text-2xl font-bold helvetica-text">
         <span className="text-[#ff9f0d]">Food</span>
         <span>tuck</span>
       </div>
       <nav className="flex justify-center md:justify-between items-center text-center text-base font-normal">
         <div className="hidden md:flex">
-          <ul className="flex gap-5 text-base font-normal">
+          <ul className="flex gap-5 text-base font-normal ">
             <li className="items-center text-center">
-              <Link href="#">Home
-              <p className="w-[7px] h-[7px] rounded-[50%] bg-[#ff9f0d] ml-[17px]"></p>
+              <Link href="#">
+                Home
+                <p className="w-[7px] h-[7px] rounded-[50%] bg-[#ff9f0d] ml-[17px]"></p>
               </Link>
             </li>
             <li className="">
@@ -29,7 +37,7 @@ export default function Header() {
             <li className="">
               <Link href="#">Pages</Link>
             </li>
-            <li className="flex items-center">
+            <li className="flex items-center text-center">
               <Link href="#">About</Link>
               <span>
                 <FaAngleDown className=" w-3 h-3" />
@@ -57,9 +65,68 @@ export default function Header() {
               <IoSearch className="w-[24px] h-[24px]" />
             </Button>
           </section>
-          <PiHandbag className="flex w-[24px] h-[24px] ml-3"/>
+          <PiHandbag className="flex w-[24px] h-[24px] ml-3" />
         </div>
       </nav>
+    </div>
+    <section className="flex justify-center items-center h-full">
+    <div className='relative z-10 items-center flex flex-col lg:flex-row lg:mx-[248px] lg:justify-between md:space-x-24 space-y-16'>
+    {/* <div className="w-full md:w-auto justify-center md:h-screen flex flex-row md:flex-col items-center text-center space-x-4 md:space-y-4">
+          <div className="w-20 md:w-px h-px md:h-20  bg-white"></div>
+          <Link href="#" className="social-icon">
+            <FaFacebookF />
+          </Link>
+          <Link href="#" className="social-icon">
+            <TiSocialTwitter />
+          </Link>
+          <Link href="#" className="social-icon">
+            <FaPinterestP />
+          </Link>
+          <div className="w-20 md:w-px h-px md:h-20  bg-white"></div>
+        </div> */}
+        <div className="hidden md:h-[492px] md:w-[25.28] lg:flex flex-row lg:flex-col justify-center items-center lg:space-y-4">
+          {/* <hr className="mx-9 w-[158px] h-3 bg-[rgba(255, 255, 255, 1)] rotation-0 md:rotate-90"/> */}
+          <div className="w-px h-[158px] bg-white"></div>
+          <Link href="#" className="social-icon">
+            <FaFacebookF />
+          </Link>
+          <Link href="#" className="social-icon">
+            <TiSocialTwitter />
+          </Link>
+          <Link href="#" className="social-icon">
+            <FaPinterestP />
+          </Link>
+          {/* <hr className="mx-9 w-[158px] h-3 bg-[rgba(255, 255, 255, 1)] rotation-0 md:rotate-90"/> */}
+          <div className="w-px h-[158px] bg-white"></div>
+        </div>
+        <div className="items-center justify-center text-center md:text-left space-y-5">
+          <p className="w-full lg:w-[472px] text-[32px] leading-10 text-[#FF9F0D]">
+            Its Quick & Amusing!
+          </p>
+          <h1 className="w-full lg:w-[472px] font-bold text-[60px] leading-[68px] text-[#FF9F0D] ">
+            Th<span className="text-white">e Art of speed food Quality</span>{" "}
+          </h1>
+          <p className="w-full lg:w-[418px] text-base font-normal">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius sed
+            pharetra dictum neque massa congue
+          </p>
+          <Button
+            variant="outline"
+            className="w-[190px] h-[60px] rounded-[30px] bg-[#FF9F0D] font-normal"
+          >
+            See Menu
+          </Button>
+        </div>
+        <div className="flex">
+          <Image
+            src="/images/restaurant/Hero/Image.svg"
+            alt="Hero-Image"
+            width={877.8}
+            height={670}
+          />
+        </div>
+      </div>
+    </section>
     </div>
   );
 }
