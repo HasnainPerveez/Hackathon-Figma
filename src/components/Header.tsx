@@ -7,7 +7,7 @@ import { PiHandbag } from "react-icons/pi";
 
 export default function Header() {
   return (
-    <div className="w-full h-[87px] mt-[45px] md:px-[50px] lg:px-[200px]  xl:px-[300px] justify-center items-center">
+    <div className="w-full h-[87px] mt-[45px] md:px-[50px] lg:px-[100pxpx]  xl:px-[200px] 2xl:px-[300px] justify-center items-center">
       <div className="flex justify-center items-center text-2xl font-bold">
         <span className="text-[#ff9f0d]">Food</span>
         <span>tuck</span>
