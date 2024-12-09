@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
- 
+    <div>
       <div className='relative z-10 flex flex-col lg:flex-row lg:mx-[248px] lg:justify-between'>
         <div className="w-full md:w-auto justify-center md:h-screen flex flex-row md:flex-col items-center text-center space-x-4 md:space-y-4">
           <div className="w-20 md:w-px h-px md:h-20  bg-white"></div>
@@ -49,6 +49,7 @@ const Hero = () => {
           />
         </div>
       </div>
+    </div>
   );
 };
 

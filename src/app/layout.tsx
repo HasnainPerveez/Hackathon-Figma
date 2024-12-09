@@ -3,16 +3,17 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { Great_Vibes , Inter } from 'next/font/google'
 import Header from '@/components/Header';
+// import Footer from "@/components/Footer";
 
 const vibes = Great_Vibes ({
   weight: '400',
-  subsets:["latin"] 
+  subsets:["latin"], 
 })
 export { vibes };
 
 const inter = Inter({
   weight: '400',
-  subsets:["latin"] 
+  subsets:["latin"],
 })
 export { inter };
 
@@ -40,10 +41,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`bg-black text-white ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`bg-black text-white ${geistSans.variable} ${geistMono.variable} antialiased h-screen`}
       >
         <Header/>
         {children}
+        {/* <Footer/> */}
       </body>
     </html>
   );

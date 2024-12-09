@@ -12,10 +12,10 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <div className='h-[1080px] lg:h-[950px] relative bg-[url("/images/restaurant/Hero/unsplash_qom5MPOER-I.svg")] bg-cover bg-center'>
+    <div className='h-full 2xl:h-[950px]  relative bg-[url("/images/restaurant/Hero/unsplash_qom5MPOER-I.svg")] bg-cover bg-center'>
       <div className="absolute inset-0 bg-[rgba(13,13,13,0.95)]"></div>
     <div className="relative z-10 w-full h-[87px] pt-[45px] md:px-[50px] lg:px-[100px]  xl:px-[200px] 2xl:px-[300px] justify-center items-center">
-      <div className="flex justify-center items-center text-2xl font-bold helvetica-text">
+      <div className="flex justify-center items-center text-2xl font-bold">
         <span className="text-[#ff9f0d]">Food</span>
         <span>tuck</span>
       </div>
@@ -69,56 +69,46 @@ export default function Header() {
         </div>
       </nav>
     </div>
-    <section className="flex justify-center items-center h-full">
-    <div className='relative z-10 items-center flex flex-col lg:flex-row lg:mx-[248px] lg:justify-between md:space-x-24 space-y-16'>
-    {/* <div className="w-full md:w-auto justify-center md:h-screen flex flex-row md:flex-col items-center text-center space-x-4 md:space-y-4">
-          <div className="w-20 md:w-px h-px md:h-20  bg-white"></div>
-          <Link href="#" className="social-icon">
-            <FaFacebookF />
-          </Link>
-          <Link href="#" className="social-icon">
-            <TiSocialTwitter />
-          </Link>
-          <Link href="#" className="social-icon">
-            <FaPinterestP />
-          </Link>
-          <div className="w-20 md:w-px h-px md:h-20  bg-white"></div>
-        </div> */}
-        <div className="hidden md:h-[492px] md:w-[25.28] lg:flex flex-row lg:flex-col justify-center items-center lg:space-y-4">
-          {/* <hr className="mx-9 w-[158px] h-3 bg-[rgba(255, 255, 255, 1)] rotation-0 md:rotate-90"/> */}
-          <div className="w-px h-[158px] bg-white"></div>
-          <Link href="#" className="social-icon">
-            <FaFacebookF />
-          </Link>
-          <Link href="#" className="social-icon">
-            <TiSocialTwitter />
-          </Link>
-          <Link href="#" className="social-icon">
-            <FaPinterestP />
-          </Link>
-          {/* <hr className="mx-9 w-[158px] h-3 bg-[rgba(255, 255, 255, 1)] rotation-0 md:rotate-90"/> */}
-          <div className="w-px h-[158px] bg-white"></div>
+    <section className="flex h-full w-full mt-20 overflow-scroll">
+      <div className='relative z-10 w-full flex flex-col lg:flex-row lg:mx-[100px] xl:mx-[248px] lg:justify-between'>
+        <div className="flex lg:w-1/2">
+          <div className="hidden xl:pt-[90px] md:h-[492px] md:w-[25.28] xl:flex flex-row lg:flex-col justify items-center xl:gap-7">
+            {/* <hr className="mx-9 w-[158px] h-3 bg-[rgba(255, 255, 255, 1)] rotation-0 md:rotate-90"/> */}
+            <div className="w-px h-[158px] bg-white space-y-2"></div>
+            <Link href="#" className="social-icon">
+              <FaFacebookF />
+            </Link>
+            <Link href="#" className="social-icon">
+              <TiSocialTwitter />
+            </Link>
+            <Link href="#" className="social-icon">
+              <FaPinterestP />
+            </Link>
+            {/* <hr className="mx-9 w-[158px] h-3 bg-[rgba(255, 255, 255, 1)] rotation-0 md:rotate-90"/> */}
+            <div className="w-px h-[158px] bg-white space-y-2"></div>
+          </div>
+          <div className="ml-10 mr-10 xl:ml-20 xl:pt-[120px] items-center justify-center text-center md:text-left space-y-5">
+            <p className="w-full lg:w-[472px] text-[32px] leading-10 text-[#FF9F0D]">
+              Its Quick & Amusing!
+            </p>
+            <h1 className="w-full lg:w-[472px] font-bold text-[60px] leading-[68px] text-[#FF9F0D] ">
+              Th<span className="text-white">e Art of speed food Quality</span>{" "}
+            </h1>
+            <p className="w-full lg:w-[418px] text-base font-normal">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius sed
+              pharetra dictum neque massa congue
+            </p>
+            <Button
+              variant="outline"
+              className="w-[190px] h-[60px] rounded-[30px] bg-[#FF9F0D] font-normal"
+            >
+              See Menu
+            </Button>
+          </div>
         </div>
-        <div className="items-center justify-center text-center md:text-left space-y-5">
-          <p className="w-full lg:w-[472px] text-[32px] leading-10 text-[#FF9F0D]">
-            Its Quick & Amusing!
-          </p>
-          <h1 className="w-full lg:w-[472px] font-bold text-[60px] leading-[68px] text-[#FF9F0D] ">
-            Th<span className="text-white">e Art of speed food Quality</span>{" "}
-          </h1>
-          <p className="w-full lg:w-[418px] text-base font-normal">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Varius sed
-            pharetra dictum neque massa congue
-          </p>
-          <Button
-            variant="outline"
-            className="w-[190px] h-[60px] rounded-[30px] bg-[#FF9F0D] font-normal"
-          >
-            See Menu
-          </Button>
-        </div>
-        <div className="flex">
-          <Image
+        <div className="flex h-auto lg:w-1/2 justify-center items-center">
+          <Image 
+            className="w-full object-contain"
             src="/images/restaurant/Hero/Image.svg"
             alt="Hero-Image"
             width={877.8}
